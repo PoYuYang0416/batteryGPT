@@ -80,14 +80,14 @@ def top_similar_entries(df, x=5):
 
     return joined_entries
 
-openai.api_key = "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"
+openai.api_key = "Enter your api key"
 def chatbot(question, past_user_messages=None, initial_context=None):    
     if past_user_messages is None:
         past_user_messages = []
 
     past_user_messages.append(question)
 
-    file_name = "C:/Users/user/Desktop/battery NLP/chatbot/GPT4_JSON_embedded.csv" #synthesis information database with embedding
+    file_name = "GPT4_JSON_embedded.csv" #synthesis information database with embedding
     df_with_emb = pd.read_csv(file_name)
 
     if initial_context is None:
